@@ -1,13 +1,24 @@
-# Compiled source #
-###################
+# Compiled source
 *.com
 *.class
 *.dll
 *.exe
 *.o
 *.so
+
+# Packages
 *.jar
 *.war
+*.nar
+*.ear
+*.7z
+*.dmg
+*.gz
+*.iso
+*.rar
+*.tar
+*.tar.gz
+*.zip
 
 # IDE folders
 .idea/
@@ -20,27 +31,20 @@ bin/
 out/
 target/
 
-# Packages #
-############
-# it's better to unpack these files and commit the raw source
-# git has its own built in compression methods
-*.7z
-*.dmg
-*.gz
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
+# BlueJ files
+*.ctxt
+.mtj.tmp/
 
-# Logs and databases #
-######################
+# Logs and databases
 *.log
 *.sql
 *.sqlite
 
-# OS generated files #
-######################
+# VM crash logs
+hs_err_pid*
+replay_pid*
+
+# OS generated files
 .DS_Store
 .DS_Store?
 ._*
