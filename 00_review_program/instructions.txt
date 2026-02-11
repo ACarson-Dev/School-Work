@@ -1,0 +1,156 @@
+
+Complete each of the following steps in order to make sure that you are prepared for success in this class. If you are unable to complete a particular step you may:
+	1. Ask a classmate for assistance.
+	2. Search for a solution online.
+	3. If you have tried both those things and are still stuck, raise your hand (or post in chat) and I'll get to you as soon as I can. Please indicate which step you are stuck on.
+Lower number steps will be helped first.
+
+=== STEP 1: Install Java
+
+Windows 11 users can find instructions here: https://www.youtube.com/watch?v=cTqp90NA4M0
+or here if you don't have headphones, here: https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/How-do-I-install-Java-on-Windows
+Windows 10 or lower users can find instructions here: https://www.youtube.com/watch?v=SQykK40fFds
+or here if you don't have headphones: https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/How-do-I-install-Java-on-Windows
+Mac users, you should already have it installed.
+Chromebook users follow this tutorial carefully: https://platypusplatypus.com/chromebooks/enable-java/
+Chromebook users, when you are finished, you need to put all your Java code (probably just put all the course content) in the "Linux Files" folder on your computer. You will then be able to access those files through the Terminal.
+
+
+=== STEP 2: Verify your installation
+
+Verify that Java is fully and correctly installed:
+Windows users, open a command prompt and make sure the following commands run without error:
+	javac -version
+	java -version
+Mac, Linux, and Chromebook users, you should run the exact same commands, but do so in the Terminal app.
+
+If there are any errors, you need to go back to STEP 1.
+
+
+=== STEP 3: First Class
+
+Create a Java class in a file named SelfReview.Java. Compile and run the file. It won't do anything yet, but it must compile and run without errors before you move on.
+
+Refer to Reference.java for code examples to help on this step and all the following steps.
+
+Include a commented header at the top of SelfReview.java in the following format, along with citation of any sources you used. Examples are provided, but you should replace them with the ones you actually used:
+/*
+[Your Name]
+[the date]
+Purpose: To briefly review (or learn) Java content in order to be prepared for CSCI 2251.
+Sources:
+	EXAMPLE: I got help with compiling from my neighbor, Amelia Bedelia.
+	EXAMPLE: I reviewed printf at https://www.baeldung.com/java-printstream-printf
+	EXAMPLE: I asked chatGPT "What is wrong with this Java snippet:
+for(int i=0; i<10 i++){
+	System.out.println(i);
+}"
+*/
+
+
+=== STEP 4: Printing
+
+Write code in the main method of SelfReview.Java to print out the following Dr. Seuss quote, 
+including a tab at the start of each line, as well as the quotation marks:
+	"Think left and think right
+	and think low and think high.
+	Oh, the thinks you can think up
+	if only you try!"
+
+
+=== STEP 5: printf
+
+Keep adding code to the bottom of the main method in SelfReview.Java. Don't delete code from any 
+previous steps.
+Use printf to display e, which is approximately 2.71828. Display 4 decimal digits and make
+the output 15 spaces wide.
+
+
+=== STEP 6: Variables
+
+Add more code to SelfReview.Java to complete this step and then compile and run to make sure 
+it works before moving on.
+-Create an integer variable named volume and set the value of volume to 4.
+-Create a double variable named height and set its value to 9.46.
+-Create a String variable named mountain and set its value to "Chicoma".
+-Print out all three variables.
+
+
+=== STEP 7: Input
+
+Add more code to SelfReview.Java to complete this step and then compile and run to make sure it works before moving on.
+Import the Scanner. Then instantiate a Scanner variable and use it to ask the user for the length, width, and wood type of the table they would like built. For instance the program interaction might look like:
+	What sort of table do you want?
+	4
+	8
+	Maple
+
+
+=== STEP 8: Branching
+
+Write code to check if the area of the table is greater than 48, and, if so, print a message informing the user that there will be an extra fee for a table that large.
+Use an else statement to otherwise print a message that the regular fee applies.
+
+
+=== STEP 9: and and or
+
+Write an if statement and use or || to check if either of the dimensions (length or width) is larger than 12. If so, print a message that this table will have to be cut on a special saw.
+
+Write another if statement to check if the name of the wood is "Teak" or "teak" and if so, print a message that this is a fancy table!
+
+Note that String equality is not compared with == in Java. See here for more information: https://www.tutorialspoint.com/How-to-check-if-two-strings-are-equal-in-Java
+
+
+=== STEP 10: Loops
+
+Write a for loop that sums up all the multiples of 7 from 7 to 700 and prints up the final calculated sum (which is 35350). In other words, the for
+loop adds up 7 + 14 + 21 + ... + 686 + 693 + 700.
+
+Write a while loop that begins to add up the same sequence of numbers but stops when the sum of the numbers so far is greater than 1000. 
+This loop should also use a variable to count up how many times the loop repeated in order for the sum to rise above 1000. 
+The sum should be just over 1000 (specifically 1071) and the count should be 17. Print out both numbers.
+
+
+=== STEP 11: Arrays
+
+Create an array named "numbers" filled with the following numbers and use a for loop to print them out, separated by commas, all on one line of 
+output: 8, 3, 1, 2, -4, 9, 1, 6.
+
+Use a minimal amount of code to fill a single array with 300 ones, followed by 300 twos, followed by 300 ones. You do not need to display anything out.
+
+
+=== STEP 12: Methods
+
+Write a static method named getEvens that takes an int array as input and returns an identical int array, except that all the odds have been removed. 
+(Hint: write ANOTHER method to count up the number of even numbers in an int array. This counting method will be used by getEvens to create an evens 
+array of the proper length).
+
+In main, call getEvens and pass the "numbers" array from step 11 to it.
+
+Display out the resulting evens array in the main method, NOT in getEvens. The correct result is: 8, 2, -4, 6
+
+
+=== STEP 13: Median of Two
+
+Write a static method named getMedianOfTwo that takes two integer arrays as input. These two input arrays are guaranteed to have ALREADY BEEN SORTED.
+The getMedianOfTwo method then returns the median of the two arrays as if they were combined into one.
+
+Test out your method by writing testing code in main using the examples below.
+
+HINT: Combining the arrays and then performing a standard calculation of the median is a good approach to solving this problem.
+
+HINT: Additional methods may be useful to help organize this problem.
+
+Example 1:
+If the two input arrays are: nums1 = [1,3] and nums2 = [2]
+Then the returned median is: 2.00000
+Explanation: merged array = [1,2,3] and median is 2.
+
+Example 2:
+If the two input arrays are: nums1 = [1,2], nums2 = [3,4]
+Then the returned median is: 2.50000
+Explanation: merged array = [1,2,3,4] and median is (2 + 3) / 2 = 2.5.
+
+FINALLY, post your getMedianOfTwo code (and only this code, not the entire SelfReview) to the MedianOfTwo discussion board. Then read and comment on some of your classmates' solutions. Did they try anything you hadn't thought of? Did they organize their code differently or choose interesting variable names? Be supportive. See what you can learn, or teach.
+
+

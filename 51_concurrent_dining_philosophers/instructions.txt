@@ -1,0 +1,23 @@
+
+Plato and Socrates are sitting down to dinner, but there is only one knife and one fork at the table. Both utensils are needed in order to eat.
+
+In class we saw what happens when the philosophers rudely hoard the silverware, but even when they share, there is much inefficiency.
+
+Your task is to write code in a single method: blockingEat() in BlockingTableware.java. Your code should use wait and notifyAll, along with the other provided methods in BlockingTableware to coordinate acquisition of knife and fork, followed by eating, followed by release of knife and fork, such that both philosophers can successfully take 1000 bites of food and do so FAST.
+
+(You must also turn in two UML diagrams: one for Philosophers.java and one for BlockingTableware.java.)
+
+The philosophers have already been modified to use BlockingTableware and blockingEat.
+
+You can and should refer back to 
+    \module30_concurrency_matrix_addition\
+including subfolders:
+    \091_dining_philosophers\
+    \098_Fig23_16-17_wait_notify_produce_consume\
+    \100_wait_notify\
+
+Do not add or change ANY code other than the code you write in the blockingEat() method of BlockingTableware.java. You're welcome to read through the other provided code.
+
+Please turn in ONLY BlockingTableware.java AND your UML.
+
+Don't forget the two UML diagrams: one for Philosophers.java and one for BlockingTableware.java.

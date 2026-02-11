@@ -1,0 +1,41 @@
+
+TITLE: Hurricane Data
+
+BACKGROUND:
+
+The American National Oceanic and Atmospheric Administration (NOAA) measures the intensity 
+of a hurricane season with the accumulated cyclone energy (ACE) index. The ACE for a season is the sum 
+of the ACE for each tropical storm with winds exceeding 35 knots (65 km/h). The maximum sustained winds 
+(measured in knots) in the storm are measured or approximated every six hour. The values are squared and 
+summed over the duration of the storm. The total is divided by 10,000, to make the parameter easier to use.
+
+This parameter is related to the energy of the storm, since kinetic energy is proportional to velocity 
+squared. However, it does not take into account the size of the storm, which would be necessary for a 
+true total energy estimate. Reliable storm data have been collected in the Atlantic Ocean since 1959 and 
+are shown in table P.4.5. These data are available to you as an EXCEL worksheet, ace.csv, and was extracted 
+from the *Accumulated Cyclone Energy article in 
+Wikipedia (http://en.wikipedia.org/wiki/Accumulated_cyclone_energy). It was collected by the National Oceanic 
+and Atmospheric Administration (http://www.aoml.noaa.gov/hrd/hrd/tcfaq/E11.html).
+
+You can open the ace.csv file in Excel, OpenOffice, or Google Docs.
+
+
+INSTRUCTIONS:
+
+Your task is to create at least two classes (I recommend naming them Main.java and HurricaneRowData.java). 
+Main must read in the data from the file and save each row of data into a new HurricaneRowData object, 
+which are further organized into an ArrayList.
+
+HurricaneRowData must have 5 private instance variables (one for each of the columns of data in ace.csv). 
+The class must also have a constructor and a toString method. You should add any getter or setter methods 
+that you need.
+
+Furthermore, in Main you must write a private static method that takes the ArrayList of data as input and 
+returns the year in which the ACE index (second column) was maximal. In other words, find the row containing 
+the maximum ACE value and return the corresponding year. 
+(Hint: the year is 2005, but you need to write code to solve this.)
+
+Display out the year and maximum ACE value BOTH on the command prompt and also output the information to 
+a text file.
+
+You may optionally create a class to store the ArrayList of HurricaneRowData objects and manage its access.
