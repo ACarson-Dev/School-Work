@@ -19,6 +19,7 @@
 *.tar
 *.tar.gz
 *.zip
+*.txt
 
 # IDE folders
 .idea/

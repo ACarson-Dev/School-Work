@@ -35,7 +35,7 @@ public class Main {
         public static String encrypt(String input, int shift) {
             String result = ""; // Initialize an empty string to hold the encrypted result
             for (int i = 0; i < input.length(); i++) {
-                char pos = (char)input.charAt(i) + shift; // Shift the character by the specified amount
+                char pos = (char)(input.charAt(i) + shift); // Shift the character by the specified amount
                 result += pos; // Append the shifted character to the result string
             }
             return result; // Return the encrypted string
