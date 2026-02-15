@@ -1,6 +1,7 @@
 Caesar Cipher Assignment
 
-A Caesar Cipher is an encryption technique in which each character in a plaintext message is replaced by a character some fixed number of positions further down the alphabet.
+A Caesar Cipher is an encryption technique in which each character in a plaintext message is 
+replaced by a character some fixed number of positions further down the alphabet.
 
 You can play around with a demo here: https://cryptii.com/pipes/caesar-cipher
 
@@ -8,7 +9,9 @@ The method is named after Julius Caesar, who used the technique in his private c
 
 Your task is to write a program that encrypts and decrypts texts using a Caesar Cipher.
 
-Instead of shifting characters down the alphabet, you can assume characters are shifted around a standard ASCII encoding, which is what Java uses anyway. For instance, if everything was shifted +2 then capital Z would appear as backslash. Refer to this table to see what I mean:
+Instead of shifting characters down the alphabet, you can assume characters are shifted around 
+a standard ASCII encoding, which is what Java uses anyway. For instance, if everything was 
+shifted +2 then capital Z would appear as backslash. Refer to this table to see what I mean:
 https://www.ascii-code.com/
 Z is represented by 90
 \ is represented by 92
@@ -29,47 +32,70 @@ Likewise, but from int to char
 will print out "P".
 
 Requirements:
- - Use a loop in main to repeatedly ask the user for a String and an int, then display out the encrypted and decrypted versions of the input. Yes, the decrypted version should be the same as the input, but display it out anyway for testing. Quit if the user types in "quit" for the String.
+ - Use a loop in main to repeatedly ask the user for a String and an int, then display out the 
+ encrypted and decrypted versions of the input. Yes, the decrypted version should be the same as 
+ the input, but display it out anyway for testing. Quit if the user types in "quit" for the String.
  - Write a method to perform the Caesar Cipher encryption.
  - Write another method to perform the Caesar Cipher decryption.
  - Both methods should takes a String and an int as input, and return a String.
- - Assume that the encryption integer will be small (in the range 0 to 20). In other words, don't worry about negative values or going out of the range of characters.
- - Write one automatic test encryption / decryption that displays out before entering the main loop. Test it on the String "The five boxing wizards jump quickly." and the int 2.
+ - Assume that the encryption integer will be small (in the range 0 to 20). In other words, 
+   don't worry about negative values or going out of the range of characters.
+ - Write one automatic test encryption / decryption that displays out before entering the main 
+   loop. Test it on the String "The five boxing wizards jump quickly." and the int 2.
 Sentence source: https://www.rd.com/list/fun-pangrams/
 
 
-After all that, you must do ONE of the following options. These options are ordered (in my opinion) from easy to hard. I will grade more leniently if you choose one of the harder options:
+After all that, you must do ONE of the following options. These options are ordered (in my opinion)
+from easy to hard. I will grade more leniently if you choose one of the harder options:
 
 
 OPTION 1.
-A one-time pad ( https://en.wikipedia.org/wiki/One-time_pad ) is an encryption technique in which a secret (and typically random) sequence of values is added to each character. This is nearly impossible to crack if the sequence is carefully chosen (the problem is how to communicate the sequence secretly to your co-conspirator).
-Write a method that takes a String as input and returns an equal length array of random integers. Keep the integers small to avoid going out of the range of character values.
-Write another pair of encryption / decryption methods. This pair takes a String and int[] as input and returns a String.
+A one-time pad ( https://en.wikipedia.org/wiki/One-time_pad ) is an encryption technique in which
+a secret (and typically random) sequence of values is added to each character. This is nearly 
+impossible to crack if the sequence is carefully chosen (the problem is how to communicate the 
+sequence secretly to your co-conspirator).
+Write a method that takes a String as input and returns an equal length array of random integers. 
+Keep the integers small to avoid going out of the range of character values.
+Write another pair of encryption / decryption methods. This pair takes a String and int[] as input
+and returns a String.
 Write one automatic test encryption / decryption that displays out before entering the main loop.
 
 
 Option 2.
-Rotating Caesar Cipher: The German Enigma machine used an encryption technique similar to a Caesar Cipher but the encryption key changes after every symbol. A simple version of this technique would add x to the integer value of a character and then add y to x for the next character.
-For instance, the word "duck", starting with an encryption key of +1 and an encryption modifier of +1 would be encrypted:
+Rotating Caesar Cipher: The German Enigma machine used an encryption technique similar to a 
+Caesar Cipher but the encryption key changes after every symbol. A simple version of this 
+technique would add x to the integer value of a character and then add y to x for the next character.
+For instance, the word "duck", starting with an encryption key of +1 and an encryption modifier 
+of +1 would be encrypted:
 d +1 -> e
 u +2 -> w
 c +3 -> f
 k +4 -> o
-Write two methods, one to encrypt and one to decrypt, a given string with this technique. Both methods will also take 2 integers as input. You may keep the integers (and the String) small and short so you don't overflow the range of characters.
+Write two methods, one to encrypt and one to decrypt, a given string with this technique. Both 
+methods will also take 2 integers as input. You may keep the integers (and the String) small and 
+short so you don't overflow the range of characters.
 Write an automatic test and display out the results.
 
 
 Option 3.
-Modify both your encryption and decryption methods to work using much larger Caesar Cipher encryption integers or even negative values. To do this, you need to ensure that integer values less than 32 wrap around to 255 and vice versa.
-For example, if you have an exclamation point character '3' represented by 33, and you subtract 2, you should get 'ÿ' represented by 255.
-If you have 'j' represented by 106 and you add 200, you should get 'S' represented by 83 (...however I might be off by one on that calculation. This stuff is hard!)
-Write two automatic test encryption / decryptions that display out before entering the main loop. One test should use a negtive encryption integer, the other test should use a large positive integer.
+Modify both your encryption and decryption methods to work using much larger Caesar Cipher 
+encryption integers or even negative values. To do this, you need to ensure that integer values 
+less than 32 wrap around to 255 and vice versa.
+For example, if you have an exclamation point character '3' represented by 33, and you subtract 2, 
+you should get 'ÿ' represented by 255.
+If you have 'j' represented by 106 and you add 200, you should get 'S' represented by 83 
+(...however I might be off by one on that calculation. This stuff is hard!)
+Write two automatic test encryption / decryptions that display out before entering the main loop. 
+One test should use a negtive encryption integer, the other test should use a large positive integer.
 
 
 Option 4.
-Brute force decrypter. Write a method that attempts to automatically decrypter a Caesar Cipher-encrypted message without knowing the encryption key. Your autoDecrypt method should first try subtracting 1, then 2, then 3, and so on, up to a limit of 100.
+Brute force decrypter. Write a method that attempts to automatically decrypter a Caesar 
+Cipher-encrypted message without knowing the encryption key. Your autoDecrypt method should first 
+try subtracting 1, then 2, then 3, and so on, up to a limit of 100.
 But how will it know when it has succeeded?
-Write another method that checks for matches in the potential decrypt Strings from this list of 1000 most common English words: 
+Write another method that checks for matches in the potential decrypt Strings from this list of 
+1000 most common English words: 
 https://gist.github.com/deekayen/4148741
 The key (integer) with the most matches should be displayed as the correct decryption.
 Write an automatic test and display out the results.
