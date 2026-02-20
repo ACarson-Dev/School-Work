@@ -21,27 +21,40 @@ Non-default values:
 	5 at 0,0
 	8 at 1,1
 	6 at 3,1
-That's not much savings, but if the matrix was 1000x1000 and 95% of the values were zero, the memory savings would be significant.
+That's not much savings, but if the matrix was 1000x1000 and 95% of the values were zero, the memory savings
+would be significant.
 
-Your task is to write a SparseMatrix Java class that can represent a matrix in the efficient sparse format. Your code should assume integer data and a default value of zero. You will need to store the number of rows and columns, then traverse the matrix, recording the row, column, and value of all the non-zero values.
+Your task is to write a SparseMatrix Java class that can represent a matrix in the efficient sparse format. 
+Your code should assume integer data and a default value of zero. You will need to store the number of rows 
+and columns, then traverse the matrix, recording the row, column, and value of all the non-zero values.
 
 Requirements:
- - A SparseMatrix constructor that takes a 2D array (int[][], the matrix) as input and saves the data in instance variables in efficient sparse format.
- - A public method in SparseMatrix named outputToArray that outputs a standard 2D array built from the sparse representation.
- - A static method named arraysAreEqual that takes two 2D arrays as input and returns true if they are the same size and contain the same values.
- - An assert statement at the end of the SparseMatrix constructor that verifies that the output of the outputToArray method exactly matches the array given as input. This assert will use the arraysAreEqual method as well as the outputToArray method.
+ - A SparseMatrix constructor that takes a 2D array (int[][], the matrix) as input and saves the data in 
+   instance variables in efficient sparse format.
+ - A public method in SparseMatrix named outputToArray that outputs a standard 2D array built from the sparse
+   representation.
+ - A static method named arraysAreEqual that takes two 2D arrays as input and returns true if they are the 
+   same size and contain the same values.
+ - An assert statement at the end of the SparseMatrix constructor that verifies that the output of the 
+   outputToArray method exactly matches the array given as input. This assert will use the arraysAreEqual 
+   method as well as the outputToArray method.
 
-Lastly, write a public static void main method to instantiate your SparseMatrix class and test it on the following test cases. Each test must include instantiation of a SparseMatrix object from a standard matrix, as well as converting the SparseMatrix back to a standard matrix and printing out the standard matrix. Test each of the following:
+Lastly, write a public static void main method to instantiate your SparseMatrix class and test it on the 
+following test cases. Each test must include instantiation of a SparseMatrix object from a standard matrix, 
+as well as converting the SparseMatrix back to a standard matrix and printing out the standard matrix. 
+Test each of the following:
 1. The matrix given above:
 	5	0	0	0
 	0	8	0	0
 	0	0	0	0
 	0	6	0	0
-2. A 10x10 sparse matrix with 5 non-default values. Create your own. Use copy-paste liberally and sprinkle the non-default values throughout.
+2. A 10x10 sparse matrix with 5 non-default values. Create your own. Use copy-paste liberally and sprinkle 
+the non-default values throughout.
 3. A 20x20 sparse matrix with 10 non-default values. Create your own.
 
 
-After all that, you must do ONE of the following options. These options are ordered (in my opinion) from easy to hard. I will grade more leniently if you choose one of the harder options:
+After all that, you must do ONE of the following options. These options are ordered (in my opinion) from 
+easy to hard. I will grade more leniently if you choose one of the harder options:
 
 
 OPTION 1.
