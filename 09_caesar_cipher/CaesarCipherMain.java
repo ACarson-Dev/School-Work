@@ -11,7 +11,7 @@ Sources:
 import java.util.Scanner;
 import java.util.Random;
 
-public class Main {
+public class CaesarCipherMain {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in); 

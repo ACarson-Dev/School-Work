@@ -9,16 +9,18 @@ Sources: I had quite a lot of back and forth with Claude on sparce matices and h
          I also utilized searchers for HashMap and general Java syntax to help with the implementation.
 */
 
- 
 
-public class Main {
+public class SparseArrayMain {
+    // SparseArrayMain method to test the SparseMatrix class
     public static void main(String[] args) {
+        // 4x4 matrix with 3 non-zero values throughout
         int[][] matrix1 = {
             {5, 0, 0, 0},
             {0, 8, 0, 0},
             {0, 0, 0, 0},
             {0, 6, 0, 0}
         };
+        // 10x10 matrix with 5 non-zero values throughout
         int[][] matrix2 = {
             {8, 0, 0, 0, 0, 0, 0, 0, 0, 0},
             {0, 1, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -31,6 +33,7 @@ public class Main {
             {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
             {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
         };
+        // 20x20 matrix with 10 non-zero values throughout
         int[][] matrix3 = {
             {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5},
             {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -53,6 +56,7 @@ public class Main {
             {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0},
             {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10}
         };
+        // Multiple test cases to test the constructor and outputToArray method of the SparseMatrix class
         SparseMatrix sparseMatrix1 = new SparseMatrix(matrix1);
         int[][] output1 = sparseMatrix1.outputToArray();
         System.out.println("Output Matrix 1:");
@@ -83,7 +87,7 @@ public class Main {
                 System.out.println();
         }
 
-        // Test add method — two 4x4 matrices
+        // Test add method for two 4x4 matrices
         int[][] addMatrix1 = {
             {1, 0, 0, 2},
             {0, 3, 0, 0},
@@ -109,5 +113,4 @@ public class Main {
         }
 
     } // End of main method
-} // End of Main class
-
+} // End of SparseArrayMain class

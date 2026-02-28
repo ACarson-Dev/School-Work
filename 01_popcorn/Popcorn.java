@@ -9,7 +9,7 @@ Sources:
 
 public class Popcorn
 {
-	// Main method to run the provided test cases
+	// HurricaneMain method to run the provided test cases
 	public static void main(String[] args)
 	{
 		System.out.println();

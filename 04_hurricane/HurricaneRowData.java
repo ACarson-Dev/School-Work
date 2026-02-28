@@ -34,7 +34,7 @@ public class HurricaneRowData {
         ", Total Major Storms: " + numMajorStorms;
     }
 
-    // Getter methods for Main.java to access the private fields of the class HurricaneRowData
+    // Getter methods for HurricaneMain.java to access the private fields of the class HurricaneRowData
     public int getYear() {
         return year;
     }

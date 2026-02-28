@@ -12,7 +12,7 @@ import java.io.File; // Importing the File class to read the .csv file
 import java.io.FileNotFoundException; // Import to handle the exception when the file is hiding(not found)
 import java.io.PrintWriter; // Import to write output to a text file
 
-public class Main {
+public class HurricaneMain {
     public static void main(String[] args) throws FileNotFoundException {
         ArrayList<HurricaneRowData> hurricaneRowData = new ArrayList<>(); // Creates an ArrayList to hold the HurricaneRowData objects
         Scanner scanner = new Scanner(new File("ace.csv")); // Creates a Scanner object to read the ace.csv file
@@ -76,4 +76,4 @@ public class Main {
         return maxAce;
     }// End of findMaxACE method
 
-}// End of class Main
+}// End of class HurricaneMain

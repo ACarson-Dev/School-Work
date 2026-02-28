@@ -7,7 +7,7 @@ I _______ made the following modifications:
 	---MULTIWORD MATCH
 	---THREE BUTTON OUTPUT
 */
-public class Main
+public class ThreadedAutocompleteMain
 {
 	public static void main(String[] args)
 	{

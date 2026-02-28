@@ -64,12 +64,12 @@ OPTIONS:
 	Your extension must be of comparable 
 	difficulty to the other options and must be
 	described in detail in a comment at the top of
-	Main.java that also tells me, your instructor,
+	ThreadedAutocompleteMain.java that also tells me, your instructor,
 	where to look in the code to see this
 	modification.
 
 Note clearly in a comment at the top of
-Main.java which modifications you made.
+ThreadedAutocompleteMain.java which modifications you made.
 
 Small amounts of extra credit are available for
 additional modifications beyond the required one

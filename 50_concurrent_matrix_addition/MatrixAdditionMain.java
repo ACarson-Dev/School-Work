@@ -17,11 +17,8 @@ and connect these issues to
 multi-threading.
 
 */
-import java.io.IOException;
-import java.io.File;
-import java.util.Scanner;
 
-public class Main
+public class MatrixAdditionMain
 {
 	public static void main(String[] args) 
 	{

@@ -33,6 +33,7 @@ public class SparseMatrix {
         return result; 
     }
 
+    // Helper method to compare two 2D arrays for equality
     public static boolean arraysAreEqual(int[][] array1, int[][] array2) {
         if(array1.length != array2.length || array1[0].length != array2[0].length){
             return false;
@@ -47,6 +48,7 @@ public class SparseMatrix {
         return true;
     }
 
+    // Method to add another sparse matrix to this sparse matrix
     public void add(SparseMatrix other) {
         if (this.rows != other.rows || this.columns != other.columns) {
             throw new IllegalArgumentException("Matrix dimensions must match to add.");

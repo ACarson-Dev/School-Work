@@ -10,8 +10,8 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class SelfReview {
-    public static void main(String[] args) // Main method
-    {            // Main method header
+    public static void main(String[] args) // main method
+    {            // main method header
         //Step #4: Printing
         System.out.printf("\t\"Think left and think right\"\n" +
 	                    "\t\"and think low and think high.\"\n" +
