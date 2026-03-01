@@ -1,26 +1,21 @@
 /*
-This code is provided to give you a
-starting place. It should be modified.
-No further imports are needed.
-To earn full credit, you must also
-answer the following questions:
-
 Q1: Car and Engine are related
 by which, Inheritance or Composition?
-
+Answer: Inheritance
 Q2: Color and Red are related
 by which, Inheritance or Composition?
-
+Answer: Composition
 Q3: Shirt and Clothing are related
 by which, Inheritance or Composition?
-
+Answer: Inheritance
 Q4: Furniture and Desk are related
 by which, Inheritance or Composition?
-
+Answer: Inheritance
 Q5: CellPhone and Battery are related
 by which, Inheritance or Composition?
-
+Answer: Composition
 */
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
