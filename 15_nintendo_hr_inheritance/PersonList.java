@@ -1,4 +1,5 @@
-package PACKAGE_NAME;
+public interface PersonList {
+	void add(Person p);
+	Person get(int index);
 
-public class PersonList {
-}
+} // End of PersonList class

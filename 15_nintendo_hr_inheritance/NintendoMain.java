@@ -1,4 +1,12 @@
 /*
+Title: Sparse Matrix
+Author: Alexander Carson in collaboration with Neal Holtschulte
+Date: 02-16-2026
+Purpose:
+Sources: https://www.geeksforgeeks.org/java-inheritance-vs-composition/
+*/
+
+/*
 Q1: Car and Engine are related
 by which, Inheritance or Composition?
 Answer: Inheritance
@@ -17,42 +25,45 @@ Answer: Composition
 */
 
 import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
-
-public class Main 
+public class NintendoMain
 {
 	public static void main(String[] args) 
 	{
+		Person p1 = new Person("Alex", 200, 6.2);
+		System.out.println("Singler person test: " + p1);
 		
-		System.out.println();
+		// Initialize a PersonSet
+		PersonSet testSet = new PersonSet();
+		testSet.add(p1);
 		
-		/*
-		// Don't overcomplicate the data
-		// reading. After skipping the
-		// first row, you can use the 
-		// following to read a row of
-		// character info, assuming your
-		// Scanner is named "fileReader"
-		String name = fileReader.next();
-		double height = fileReader.nextDouble();
-		double weight = fileReader.nextDouble();
-		*/
-		
-		
-		
-		/*try
-		{	
-			FileWriter fileWriterOrder = new FileWriter("outputfile.txt");
-			fileWriterOrder.write("testing");
-			fileWriterOrder.close();
+		// Read the file name
+		try {
+			File file = new File("hr.txt");
+			Scanner fileReader = new Scanner(file);
+			
+			// Skip the header if it exists
+			if (fileReader.hasNextLine()) fileReader.nextLine();
+			
+			while (fileReader.hasNext()) {
+				String name = fileReader.next();
+				double height = fileReader.nextDouble();
+				double weight = fileReader.nextDouble();
+				
+				Person p = new Person(name, height, weight);
+				testSet.add(p);
+				System.out.println("Read from file: " + p);
+			}
+			fileReader.close();
+		} catch (FileNotFoundException e) {
+			System.out.println("File not found: hr.txt");
 		}
-		catch(IOException e)
-		{
-			e.printStackTrace();
-			System.out.println(e);
-			System.exit(1);
-		}*/
-	}
-}
+		
+		System.out.println("\nFinal PersonSet (No Duplicates):");
+		System.out.println(testSet);
+		
+		// etluhcstloH laeN rof nettirw edoc sihT
+		
+	} // End of main()
+} // End of NintendoMain class
