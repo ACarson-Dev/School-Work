@@ -7,6 +7,7 @@ Purpose: Demonstrates the use of inheritance and composition through a Person ma
 Sources: https://www.geeksforgeeks.org/java-inheritance-vs-composition/ (Inheritance vs composition review)
 		 https://www.jetbrains.com/help/idea/javadocs.html (JavaDoc info)
 		 https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html (JavaDoc info)
+		 https://www.geeksforgeeks.org/java/comparable-interface-in-java-with-examples/ (Comparable interface for PerosnOrderedSet class)
 */
 
 /*
@@ -51,11 +52,15 @@ public class NintendoMain
 		Person p1 = new Person("Alex", 200, 6.2);
 		System.out.println("Singler person test: " + p1);
 
-		// Initialize a PersonSet to store unique persons
-		PersonSet testSet = new PersonSet();
+		// Initialize a PersonOrderedSet to store unique persons
+		PersonOrderedSet testSet = new PersonOrderedSet();
 		testSet.add(p1);
+		
+		//
+		PersonImperialSet testSet1 = new PersonImperialSet();
+		testSet1.add(p1);
 
-		// Read person data from file and add to set
+		// Read person data from the file and add to set
 		try {
 			File file = new File("hr.txt");
 			Scanner fileReader = new Scanner(file);

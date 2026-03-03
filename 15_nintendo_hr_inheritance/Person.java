@@ -6,7 +6,7 @@
  * This class provides methods to access and modify person attributes,
  * and overrides equals() and toString() for proper object comparison and display.
  */
-public class Person {
+public class Person  {
 	private String name;
 	private double weight;
 	private double height;
@@ -41,7 +41,16 @@ public class Person {
 	public double getWeight() {
 		return weight;
 	}
-
+	
+	/**
+	 * Gets the name of the person.
+	 *
+	 * @return the name of the person
+	 */
+	public String getName() {
+		return name;
+	}
+	
 	/**
 	 * Sets the height of the person.
 	 *
