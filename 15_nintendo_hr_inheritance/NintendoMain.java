@@ -1,7 +1,7 @@
 /*
 Title: Nintendo HR Inheritance
 Author: Alexander Carson in collaboration with Neal Holtschulte
-Date: 02-16-2026
+Date: 03-01-2026
 Purpose: Demonstrates the use of inheritance and composition through a Person management system
          that reads employee data from a file and stores it in a set that prevents duplicates.
 Sources: https://www.geeksforgeeks.org/java-inheritance-vs-composition/ (Inheritance vs. composition review)
@@ -12,6 +12,7 @@ Sources: https://www.geeksforgeeks.org/java-inheritance-vs-composition/ (Inherit
 		 Queried Junie AI for the following:
 		 - Refactor all main classed in project folder to resolve IDE issues.
 		 - Verify completeness of Javadoc commenting. It found some small clarification issues that were fixed.
+		 - Generate commit messages. I reviewed them ensuring they all aligned before commiting and pushing to the repo.
 		 Queried Claude AI for the following:
 		 - Take assignment doc and combine any extra notes with applicable instruction steps and present it to me.
 		   Take steps and match them with their UML diagrams sequentially. I then used these documents for the completion of my assignment.
