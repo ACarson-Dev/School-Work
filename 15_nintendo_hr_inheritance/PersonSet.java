@@ -35,13 +35,13 @@ public class PersonSet implements PersonList {
 
 	/**
 	 * Returns a string representation of all persons in the set.
-	 * Each person is displayed on a separate line.
+	 * The output is formatted with a header and columns for name, height, and weight.
 	 *
-	 * @return a string containing all persons in the set
+	 * @return a formatted string containing all persons in the set
 	 */
 	@Override
 	public String toString() {
-		String result = "";
+		String result = String.format("%-10s %-15s %-15s\n", "Name", "Height", "Weight");
 		for (Person p : people) {
 			result += p.toString() + "\n";
 		}

@@ -3,10 +3,10 @@
 
 /**
  * Represents a person with a name, weight, and height.
- * This class provides methods to access and modify person attributes,
+ * This class provides methods to access and modify person attribute
  * and overrides equals() and toString() for proper object comparison and display.
  */
-public class Person  {
+public class Person implements Comparable<Person> {
 	private String name;
 	private double weight;
 	private double height;
@@ -15,19 +15,30 @@ public class Person  {
 	 * Constructs a Person object with the specified attributes.
 	 *
 	 * @param name the name of the person
-	 * @param weight the weight of the person in pounds
-	 * @param height the height of the person in feet
+	 * @param height the height of the person in centimeters
+	 * @param weight the weight of the person in kilograms
 	 */
-	public Person(String name, double weight, double height) {
+	public Person(String name, double height, double weight) {
 		this.name = name; // 'this' is a reference to the current object
-		this.weight = weight;
 		this.height = height;
+		this.weight = weight;
+	}
+
+	/**
+	 * Copy constructor for Person.
+	 *
+	 * @param p the person to copy
+	 */
+	public Person(Person p) {
+		this.name = p.name;
+		this.height = p.height;
+		this.weight = p.weight;
 	}
 
 	/**
 	 * Gets the height of the person.
 	 *
-	 * @return the height in feet
+	 * @return the height
 	 */
 	public double getHeight() {
 		return height;
@@ -36,7 +47,7 @@ public class Person  {
 	/**
 	 * Gets the weight of the person.
 	 *
-	 * @return the weight in pounds
+	 * @return the weight
 	 */
 	public double getWeight() {
 		return weight;
@@ -54,7 +65,7 @@ public class Person  {
 	/**
 	 * Sets the height of the person.
 	 *
-	 * @param height the new height in feet
+	 * @param height the new height
 	 */
 	public void setHeight(double height) {
 		this.height = height;
@@ -63,7 +74,7 @@ public class Person  {
 	/**
 	 * Sets the weight of the person.
 	 *
-	 * @param weight the new weight in pounds
+	 * @param weight the new weight
 	 */
 	public void setWeight(double weight) {
 		this.weight = weight;
@@ -76,7 +87,18 @@ public class Person  {
 	 */
 	@Override
 	public String toString() {
-		return name + " is " + height + " feet tall and " + weight + " pounds.";
+		return String.format("%-10s %-15.2f %-15.2f", name, height, weight);
+	}
+
+	/**
+	 * Compares this person to another for alphabetical ordering by name.
+	 *
+	 * @param p the person to compare with
+	 * @return a negative integer, zero, or a positive integer as this person's
+	 */
+	@Override
+	public int compareTo(Person p) {
+		return this.name.compareTo(p.getName());
 	}
 
 	/**
@@ -96,7 +118,7 @@ public class Person  {
 		if (!(o instanceof Person)) return false;
 
 		Person p = (Person) o;
-
+		
 		return this.name.equals(p.name) &&
 				Double.compare(this.height, p.height) == 0 &&
 				Double.compare(this.weight, p.weight) == 0;

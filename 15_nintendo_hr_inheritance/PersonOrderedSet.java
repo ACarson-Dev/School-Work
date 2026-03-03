@@ -1,20 +1,26 @@
+import java.util.Collections;
+
+/**
+ * A set of Person objects that maintains alphabetical order by name.
+ */
 public class PersonOrderedSet extends PersonSet {
 	
 	/**
-	 * Adds a person to the set, maintaining the order of the set.
+	 * Adds a person to the set if they are not already present,
+	 * then sorts the list alphabetically by name.
 	 *
 	 * @param p the Person object to add
 	 */
 	@Override
 	public void add(Person p) {
-		if (!people.contains(p)) {
-			for (int i = 0; i < people.size(); i++) {
-				if (p.getName().compareTo(people.get(i).getName()) < 0) {
-					people.add(i, p);
-					return;
-				}
-			}
-			people.add(p);
-		}
+		super.add(p);
+		sort();
+	}
+
+	/**
+	 * Sorts the list of persons alphabetically by name.
+	 */
+	private void sort() {
+		Collections.sort(people);
 	}
 }
