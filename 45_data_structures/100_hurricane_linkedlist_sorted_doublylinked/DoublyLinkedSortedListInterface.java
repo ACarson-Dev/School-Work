@@ -1,4 +1,3 @@
-
 public interface DoublyLinkedSortedListInterface
 {
 	//Return a reference to the first Node in the list
@@ -15,4 +14,4 @@ public interface DoublyLinkedSortedListInterface
 	
 	//Return the entire list as a multi-line String
 	public String toString();
-}
+} // End of interface DoublyLinkedSortedListInterface

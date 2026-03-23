@@ -158,10 +158,10 @@ public class DoublyLinkedSortedList implements DoublyLinkedSortedListInterface {
     }
 
     /**
-     * Returns the size of the list.
+     * Returns the getSize of the list.
      * @return the number of nodes in the list
      */
-    public int size() {
+    public int getSize() {
         return size;
     }
 
@@ -175,8 +175,7 @@ public class DoublyLinkedSortedList implements DoublyLinkedSortedListInterface {
         Node current = first;
 
         while (current != null) {
-            if (current.getValue().getYear() == value.getYear() &&
-                current.getValue().getAceIndex() == value.getAceIndex()) {
+            if (current.getValue().equals(value)) {
                 return true;
             }
             current = current.getNext();
@@ -195,8 +194,7 @@ public class DoublyLinkedSortedList implements DoublyLinkedSortedListInterface {
         Node current = first;
 
         while (current != null) {
-            if (current.getValue().getYear() == value.getYear() &&
-                current.getValue().getAceIndex() == value.getAceIndex()) {
+            if (current.getValue().equals(value)) {
                 return current;
             }
             current = current.getNext();

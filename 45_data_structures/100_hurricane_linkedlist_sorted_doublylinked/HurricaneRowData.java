@@ -26,6 +26,31 @@ public class HurricaneRowData {
         this.numMajorStorms = numMajorStorms;
     }
     
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        HurricaneRowData other = (HurricaneRowData) obj;
+        
+        // If the years match, they are considered "the same" row for identifying a hurricane data point.
+        if (this.year == other.year) {
+            // Check for consistency in the other data fields as per the suggestion.
+            if (this.aceIndex != other.aceIndex || 
+                this.numTropStorms != other.numTropStorms || 
+                this.numHurricanes != other.numHurricanes || 
+                this.numMajorStorms != other.numMajorStorms) {
+                System.out.println("Warning: Data mismatch for year " + this.year + ". Please check for data consistency.");
+            }
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return java.util.Objects.hash(year);
+    }
+
     @Override // Override the default toString method to do what I need it to do.
     public String toString() {
         return "Year: " + year + ", ACE Index: " + aceIndex + 

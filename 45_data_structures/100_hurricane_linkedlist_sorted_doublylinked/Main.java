@@ -61,8 +61,8 @@ public class Main {
     } // End of Main method
 
     /**
-     * Test method 1: Tests insertion and resulting size of the doubly linked list.
-     * Inserts 3 items and verifies the list size is 3.
+     * Test method 1: Tests insertion and resulting getSize of the doubly linked list.
+     * Inserts 3 items and verifies the list getSize is 3.
      */
     private static void testInsertionAndSize() {
         DoublyLinkedSortedList testList = new DoublyLinkedSortedList();
@@ -71,10 +71,10 @@ public class Main {
         testList.insert(new HurricaneRowData(2001, 150, 12, 6, 3));
         testList.insert(new HurricaneRowData(2002, 75, 8, 4, 1));
 
-        if (testList.size() == 3) {
-            System.out.println("Test 1 PASSED: List size is correct (3)"); // Whoop whoop!
+        if (testList.getSize() == 3) {
+            System.out.println("Test 1 PASSED: List getSize is correct (3)"); // Whoop whoop!
         } else {
-            System.out.println("Test 1 FAILED: Expected size 3, but got " + testList.size());
+            System.out.println("Test 1 FAILED: Expected getSize 3, but got " + testList.getSize());
         }
     }
 
