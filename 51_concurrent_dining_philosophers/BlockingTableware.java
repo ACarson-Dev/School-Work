@@ -84,9 +84,42 @@ public class BlockingTableware
 
 	public synchronized boolean blockingEat()
 	{
-        //Your code goes here:
-		
-		return true; //TODO: Change this
+		// Keep trying until they have both utensils
+		while (!iHaveKnife() || !iHaveFork())  // While they don't have both'
+		{
+			pickupKnife();
+			pickupFork();
+
+			// If they couldn't get both, put down whatever they have and wait
+			if (!iHaveKnife() || !iHaveFork())
+			{
+				// Put down whatever they have
+				if (iHaveKnife()) putDownKnife();
+				if (iHaveFork()) putDownFork();
+
+				try
+				{
+					wait(); // Wait to be notified by another thread if they can't get both
+				}
+				// If the thread is interrupted, exit the method
+				catch (InterruptedException e)
+				{
+					Thread.currentThread().interrupt();
+				}
+			}
+		}
+
+		// They have both utensils — eat
+		eat();
+
+		// Put down utensils so the other philosopher can use them
+		putDownKnife();
+		putDownFork();
+
+		// Wake up the other philosopher
+		notifyAll();
+
+		return true; // They were able to eat:)
 	}
 
 	public int getFailureCount()

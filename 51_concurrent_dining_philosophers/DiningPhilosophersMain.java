@@ -1,4 +1,17 @@
-
+/*
+Title: Blocking Tableware
+Author: Alexander Carson in collaboration with Neal Holtschulte
+Date: 04-12-2026
+Purpose: Coordinate shared utensil access between philosopher threads
+Sources: Winterbe Java 8 Concurrency Tutorial - Synchronized and Locks:
+             https://winterbe.com/posts/2015/04/30/java8-concurrency-tutorial-synchronized-locks-examples/
+             - Reference for ReentrantLock usage and tryLock behavior
+         Oracle Java API - ReentrantLock:
+             https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/locks/ReentrantLock.html
+             - Reference for ReentrantLock methods including tryLock, unlock, and isHeldByCurrentThread
+         Queried Claude AI for the following:
+             - References formatting
+*/
 public class DiningPhilosophersMain
 {
 	public static void main(String args[])
