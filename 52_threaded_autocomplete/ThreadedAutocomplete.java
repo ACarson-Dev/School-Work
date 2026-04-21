@@ -168,29 +168,30 @@ public class ThreadedAutocomplete extends Thread
 	}
 	
 	//Get all the text between the current
-	//Scanner location and the next period
-	//or question mark.
+	//Scanner location and the next period,
+	//question mark, or exclamation mark.
 	private String getTextToPeriod(Scanner input, String remainder)
 	{
 		int i = remainder.indexOf(".");
 		int j = remainder.indexOf("?");
-		int x = i;
-		//If no period is found then set x
-		//to the index of any question mark.
-		if(x == -1)
-			x = j;
-		//If a period is found and a question
-		//mark is too, use the earlier
-		//punctuation
-		else if(j!=-1 && j<x)
-			x = j;
+		int k = remainder.indexOf("!");
+		
+		int x = -1;
+
+		// Find the first occurrence of any punctuation.
+		// Each line sets x to the new index only if that index exists. The -1 means
+		// it was not found and is earlier than the best match found so far.
+		// This way I was able to avoid nested if/else chains and ignore missing punctuation.
+		if (i != -1) x = i;
+		if (j != -1 && (x == -1 || j < x)) x = j;
+		if (k != -1 && (x == -1 || k < x)) x = k;
 		
 		//If a sentence-ender was found, return
 		//the String up to and including the
 		//punctuation.
 		if(x != -1)
 		{
-			return remainder.substring(0, x+1);
+			return remainder.substring(0, x + 1); // Throws StringIndexOutOfBoundsException if x is -1.
 		}
 		if(input.hasNextLine())
 		{
