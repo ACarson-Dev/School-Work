@@ -23,4 +23,4 @@ public class PersonOrderedSet extends PersonSet {
 	private void sort() {
 		Collections.sort(people);
 	}
-}
+} // End of PersonOrderedSet class

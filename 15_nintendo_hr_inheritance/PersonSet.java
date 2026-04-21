@@ -47,6 +47,4 @@ public class PersonSet implements PersonList {
 		}
 		return result;
 	}
-	
-	
 } // End of PersonSet class
